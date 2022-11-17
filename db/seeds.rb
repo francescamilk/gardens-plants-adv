@@ -60,4 +60,8 @@ ginseng = Plant.create!(
   garden: japanese
 )
 
+Tag.create!(name: 'flower')
+Tag.create!(name: 'seasonal')
+Tag.create!(name: 'edible')
+
 puts "Done!"
