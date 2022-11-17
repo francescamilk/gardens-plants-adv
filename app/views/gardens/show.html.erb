@@ -31,6 +31,23 @@
 
   <div class="d-flex justify-content-between pt-5">
     <%= link_to "🔙", gardens_path, class: 'display-6' %>
-    <%= link_to "➕🌱", new_garden_plant_path(@garden), class: 'display-6' %>
+    <%#= link_to "➕🌱", 
+      new_garden_plant_path(@garden), 
+      class: 'display-6',
+      data-controller: 'form'
+    %>
+  </div>
+</div>
+
+<div data-controller='form'>
+  <p data-action="click->form#popUp">➕🌱</p>
+  <div class="hidden" data-form-target="plantform">
+    <div class="d-flex justify-content-center align-items-center">
+      <%= simple_form_for [@garden, @plant] do |f| %>
+        <%= f.input :name %>
+        <%= f.input :image_url %>
+        <%= f.submit %>
+      <% end %>
+    </div>
   </div>
 </div>
