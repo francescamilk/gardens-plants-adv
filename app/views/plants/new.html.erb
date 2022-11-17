@@ -1,0 +1,11 @@
+<div class="container text-center">
+  <h1>Add a plant to <%= @garden.name %></h1>
+  <div class="d-flex justify-content-center align-items-center">
+    <%= simple_form_for [@garden, @plant] do |f| %>
+      <%= f.input :name %>
+      <%= f.input :image_url %>
+      <%= f.submit %>
+    <% end %>
+  </div>
+</div>
+

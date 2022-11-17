@@ -1,0 +1,17 @@
+.plant-cards-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 4rem;
+}
+
+.plant-card {
+  width: 26rem;
+  height: 10rem;
+  border-radius: 4px;
+  @include absolute-center;
+
+  h4 {
+    color: white;
+    font-weight: 500;
+  }
+}

@@ -9,5 +9,6 @@ class GardensController < ApplicationController
   # 'localhost/gardens/:id'
   def show
     @garden = Garden.find(params[:id])
+    @plant = Plant.new
   end
 end

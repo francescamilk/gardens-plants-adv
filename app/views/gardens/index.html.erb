@@ -1,8 +1,13 @@
-<div class="container">
-  <h1>All gardens</h1>
-  <ul>
-    <% @gardens.each do |garden| %>
-      <li><%= link_to garden.name, garden_path(garden) %></li>
-    <% end %>
-  </ul>
+<div class="overflow-hidden" style="height: 100vh">
+  <div class="container pt-5">
+    <h1>All gardens</h1>
+    <ul>
+      <% @gardens.each do |garden| %>
+        <li><%= link_to garden.name, garden_path(garden) %></li>
+      <% end %>
+    </ul>
+  </div>
+  <div id="index-logo w-100" style="text-align: end;">
+    <%= image_tag('https://cdn-icons-png.flaticon.com/512/628/628283.png') %>
+  </div>
 </div>

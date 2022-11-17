@@ -1,5 +1,5 @@
 puts "Clearing db..."
-Garden.destroy_all
+Garden.destroy_all if Rails.env.development?
 
 puts "Creating gardens..."
 italian = Garden.create!(
