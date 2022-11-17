@@ -19,7 +19,12 @@
           ), url(<%= plant.image_url %>);"
       >
         <h4><%= plant.name %></h4>
-        <p><%= link_to "Add tag", new_plant_tag_path(plant) %></p>
+        <div>
+          <% plant.tags.each do |tag| %>
+          <span class="text-danger"><%= tag.name %></span>
+          <% end %>
+          <p><%= link_to "Add tag", new_plant_tag_path(plant) %></p>
+        </div>
       </div>
     <% end %>
   </div>
