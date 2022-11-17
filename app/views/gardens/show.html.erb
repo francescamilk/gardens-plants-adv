@@ -1,13 +1,20 @@
-<div style="background-image: url(<%= @garden.image_url %>);">
-  <h1><%= @garden.name %></h1>
+<div 
+  class="garden-banner" 
+  style="background: linear-gradient(
+      rgba(0, 0, 0, 0.45), 
+      rgba(0, 0, 0, 0.45)
+    ), url(<%= @garden.image_url %>);"
+>
+  <h1>The <%= @garden.name %></h1>
 </div>
 
-<h3>Plants:</h3>
-<ul>
-  <% @garden.plants.each do |plant| %>
-    <li><%= plant.name %></li>
-  <% end %>
-</ul>
+<div class="container">
+  <ul>
+    <% @garden.plants.each do |plant| %>
+      <li><%= plant.name %></li>
+    <% end %>
+  </ul>
 
-<%= link_to "Add a plant", new_garden_plant_path(@garden) %>
-<%= link_to "Back", gardens_path %>
+  <%= link_to "Add a plant", new_garden_plant_path(@garden) %>
+  <%= link_to "Back", gardens_path %>
+</div>
