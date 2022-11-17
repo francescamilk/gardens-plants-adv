@@ -1,0 +1,19 @@
+.form-container {
+  background: white;
+  border-radius: 8px;
+  padding: 8rem;
+}
+
+.pop-up {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, .5);
+  @include absolute-center;
+}
+
+.hidden {
+  display: none;
+}
